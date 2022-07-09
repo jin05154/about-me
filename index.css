@@ -9,6 +9,7 @@
 
 :root {
   --border-color: #efefef;
+  --border-shadow: #D3D3D3;
   --subheading-background: #fadbd8;
 }
 
@@ -36,6 +37,9 @@ p {
 /* header */
 nav {
   width: 100%;
+  position: relative;
+  box-shadow: 0 -2px 10px 0 var(--border-shadow);
+  z-index: 99;
 }
 
 nav ul {
@@ -64,11 +68,22 @@ nav ul li a:hover {
 /* main */
 main {
   width: 900px;
-  margin: 0 auto;
+  margin: -8px auto 0;
+}
+
+#cover {
+  height: 260px;
+  z-index: 0;
+}
+
+#cover img {
+  height: 300px;
+  width: 900px;
+  border-radius: 0 0 8px 8px;
 }
 
 #top {
-  padding: 4px;
+  padding: 4px 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -79,23 +94,22 @@ main {
 }
 
 #picture {
-  height: 248px;
-  width: 248px;
-  border: 1px solid var(--border-color);
+  height: 208px;
+  width: 208px;
   border-radius: 50%;
   cursor: pointer;
 }
 
 #picture img {
-  height: 240px;
-  width: 240px;
+  height: 200px;
+  width: 200px;
   border: 4px solid white;
   border-radius: 50%;
 }
 
 .picture-large {
-  height: 620px;
-  width: 620px;
+  height: 610px;
+  width: 610px;
   position: fixed;
   display: none;
   top: 20vh;
@@ -111,8 +125,8 @@ main {
 .picture-large #pic-large {
   height: 600px;
   width: 600px;
-  padding: 10px 0 0 10px;
-  margin-top: -60px;
+  padding: 5px 0 0 5px;
+  margin-top: -56px;
   z-index: 1;
 }
 
@@ -120,7 +134,7 @@ main {
   height: 30px;
   width: 30px;
   position: relative;
-  margin: 24px 0 0 calc(620px - 52px);
+  margin: 20px 0 0 calc(620px - 56px);
   z-index: 99;
   cursor: pointer;
 }
