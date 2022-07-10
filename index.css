@@ -16,6 +16,7 @@
   --secondary-color: #65676B;
   --hover-pink: #FBC5C5;
   --menu-color: #4C3F91;
+  --devider: #CED0D4;
 }
 
 html {
@@ -90,7 +91,7 @@ p {
   transition: 0.3s color;
 }
 
-#top-nav ul li a:hover {
+#top-nav ul li:hover a {
   color: var(--hover-pink);
 }
 
@@ -249,6 +250,7 @@ main {
 }
 
 #content-1 {
+  width: 900px;
   display: inherit;
   flex-direction: inherit;
 }
@@ -284,10 +286,35 @@ main {
 }
 
 #content-2 {
+  width: 900px;
   display: none;
 }
 
+.info-box {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 1px 2px 0 var(--border-shadow);
+}
+
+#info-selector {
+  width: 25%;
+  min-height: inherit;
+  border-right: 1px solid var(--devider);
+}
+
+#info-content {
+  width: 75%;
+}
+
 #content-3 {
+  width: 900px;
   display: none;
 }
 
@@ -302,8 +329,8 @@ main {
 }
 
 .gallery-box {
-  width: 290px;
-  height: 290px;
+  width: 280px;
+  height: 280px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -316,8 +343,8 @@ main {
 }
 
 .gallery-box img {
-  width: 290px;
-  height: 290px;
+  width: 280px;
+  height: 280px;
   border-radius: 8px;
   transition: 0.3s ease;
 }

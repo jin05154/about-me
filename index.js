@@ -34,4 +34,4 @@ function handleCloseGallery() {
   document.getElementById("gallery-large").style.display = "none";
 }
 
-// TODO: 게시물/정보/bgm/언어 변경/dark mode
+// TODO: 정보/nav 아이콘/bgm/언어 변경/dark mode
