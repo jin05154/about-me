@@ -23,11 +23,11 @@
       <img src="image/cover.png" alt="cover image" />
     </section>
     <section id="profile">
-      <div id="picture" onclick="handleClickProfilePicture()">
+      <div id="picture" onclick="handleClickProfile()">
         <img src="image/profile.jpg" alt="profile picture" />
       </div>
       <div class="picture-large" id="picture-large">
-        <img src="icon/close.png" alt="close" id="close-btn" onclick="handleClickClosePicture()" />
+        <img src="icon/close-1.png" alt="close" id="close-btn" onclick="handleCloseProfile()" />
         <img src="image/profile.jpg" alt="profile picture" id="pic-large" />
       </div>
       <div id="name">
@@ -62,7 +62,7 @@
               <p>- 외국계/해외 취업</p>
               <br>
               <h3>✅ 관심 분야/기술</h3>
-              <p>- CSS, React, Express.js</p>
+              <p>- CSS, React(💖), Express.js</p>
               <p>- 추천 알고리즘 (User-based CF)</p>
               <p>- 컴퓨터 비전 (Object Detection)</p>
             </div>
@@ -90,7 +90,40 @@
 
         </section>
         <section id="content-3">
-
+          <div id="gallery-wrap">
+            <section class="gallery" id="gallery-line-1">
+              <article class="gallery-box" onclick="handleClickGallery(this.children[0].getAttribute('src'))">
+                <img src="image/computer.jpg" alt="개발환경" />
+                <p><b>자세히 보기</b></p>
+              </article>
+              <article class="gallery-box" onclick="handleClickGallery(this.children[0].getAttribute('src'))">
+                <img src="image/alcohol.jpg" alt="막걸리" />
+                <p><b>자세히 보기</b></p>
+              </article>
+              <article class="gallery-box" onclick="handleClickGallery(this.children[0].getAttribute('src'))">
+                <img src="image/cookie.jpg" alt="내가 구운 쿠키" />
+                <p><b>자세히 보기</b></p>
+              </article>
+            </section>
+            <section class="gallery" id="gallery-line-2">
+              <article class="gallery-box" onclick="handleClickGallery(this.children[0].getAttribute('src'))">
+                <img src="image/parkjaekyung.jpg" alt="박재경(고양이 이름임)" />
+                <p><b>자세히 보기</b></p>
+              </article>
+              <article class="gallery-box" onclick="handleClickGallery(this.children[0].getAttribute('src'))">
+                <img src="image/codeclub.jpg" alt="코딩 교육봉사" />
+                <p><b>자세히 보기</b></p>
+              </article>
+              <article class="gallery-box" onclick="handleClickGallery(this.children[0].getAttribute('src'))">
+                <img src="image/chim.jpg" alt="이말년 블로그 댓글" />
+                <p><b>자세히 보기</b></p>
+              </article>
+            </section>
+          </div>
+          <div class="gallery-large" id="gallery-large">
+            <img src="icon/close-2.png" alt="close" id="close-btn" onclick="handleCloseGallery()" />
+            <img src="#" alt="picture" id="gallery-large-img" />
+          </div>
         </section>
       </div>
       <footer>
