@@ -6,18 +6,20 @@ function handleClickClosePicture() {
   document.getElementById("picture-large").style.display = "none";
 }
 
-function changeMenuColor(n) {
+function changeMenu(n) {
   for (let i = 1; i <= 3; i++) {
     if (i == n) {
       document.getElementById(`menu-${i}`).style.color = "var(--menu-color)";
+      document.getElementById(`content-${i}`).style.display = "block";
     } else {
       document.getElementById(`menu-${i}`).style.color = "black";
+      document.getElementById(`content-${i}`).style.display = "none";
     }
   }
 }
 
 function handleSlider(n) {
-  changeMenuColor(n);
+  changeMenu(n);
   document.getElementById("menu-slider").style.transform = `translateX(calc(${
     n - 1
   } * 100px))`;

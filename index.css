@@ -8,12 +8,13 @@
 }
 
 :root {
+  --scrollbar-color: #7a7a7a;
   --border-color: #efefef;
   --border-shadow: #D3D3D3;
   --nav-border-color: #CACACA;
   --content-background: #F0F2F5;
   --hover-pink: #FBC5C5;
-  --menu-color: #8879B0;
+  --menu-color: #4C3F91;
 }
 
 html {
@@ -36,6 +37,28 @@ h3 {
 
 p {
   padding: 4px 0;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--scrollbar-color) white;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: white;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: 10px;
+  border: 3px solid white;
 }
 
 /* header */
@@ -152,6 +175,7 @@ main {
     opacity: 0;
     margin-top: -50px;
   }
+
   100% {
     opacity: 1;
     margin-top: 0;
@@ -202,6 +226,7 @@ main {
 
 #content-wrap {
   width: 900px;
+  min-height: calc(100vh - 620px);
   margin: 0 auto;
   padding: 12px 0;
 }
@@ -212,11 +237,11 @@ main {
   padding: 12px;
 }
 
-#info {
+#content-2 {
   display: none;
 }
 
-#gallery {
+#content-3 {
   display: none;
 }
 
