@@ -10,7 +10,7 @@ function changeMenu(n) {
   for (let i = 1; i <= 3; i++) {
     if (i == n) {
       document.getElementById(`menu-${i}`).style.color = "var(--menu-color)";
-      document.getElementById(`content-${i}`).style.display = "block";
+      document.getElementById(`content-${i}`).style.display = "contents";
     } else {
       document.getElementById(`menu-${i}`).style.color = "black";
       document.getElementById(`content-${i}`).style.display = "none";
