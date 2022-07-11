@@ -1,54 +1,50 @@
+const profilePicture = document.getElementById("picture");
+const btnClosePicture = document.getElementById("close-profile-btn");
+const menuSlider = document.getElementById("menu-slider");
+const galleryItems = document.querySelectorAll(".gallery-box");
+const galleryImages = document.querySelectorAll(".gallery-box > img");
+const btnCloseGallery = document.getElementById("close-gallery-btn");
+
 // dark mode toggle switch
 let checkbox = document.querySelector('input[type="checkbox"]');
 let checkedMenu = 0;
 
 // TODO: addEventListener/정보/nav 아이콘/bgm/언어 변경/dark mode
 
-function handleClickProfile() {
+profilePicture.addEventListener("click", () => {
   document.getElementById("picture-large").style.display = "block";
-}
-
-function handleCloseProfile() {
+});
+btnClosePicture.addEventListener("click", () => {
   document.getElementById("picture-large").style.display = "none";
-}
+});
+galleryItems.forEach((item, index) =>
+  item.addEventListener("click", function () {
+    document.getElementById("gallery-large").style.display = "block";
+    document.getElementById("gallery-large-img").src = galleryImages[index].src;
+  })
+);
+btnCloseGallery.addEventListener(
+  "click",
+  () => (document.getElementById("gallery-large").style.display = "none")
+);
 
 function changeMenu(n) {
   checkedMenu = n;
   for (let i = 1; i <= 3; i++) {
-    if (checkbox.checked) {
-      if (i == n) {
-        document.getElementById(`menu-${i}`).style.color = "var(--menu-color)";
-        document.getElementById(`content-${i}`).style.display = "contents";
-      } else {
-        document.getElementById(`menu-${i}`).style.color = "var(--dark-mode-text)";
-        document.getElementById(`content-${i}`).style.display = "none";
-      }
+    if (i == n) {
+      document.getElementById(`menu-${i}`).style.color = "var(--menu-color)";
+      document.getElementById(`content-${i}`).style.display = "contents";
     } else {
-      if (i == n) {
-        document.getElementById(`menu-${i}`).style.color = "var(--menu-color)";
-        document.getElementById(`content-${i}`).style.display = "contents";
-      } else {
-        document.getElementById(`menu-${i}`).style.color = "var(--secondary-text)";
-        document.getElementById(`content-${i}`).style.display = "none";
-      }
+      document.getElementById(`menu-${i}`).style.color =
+        "var(--secondary-text)";
+      document.getElementById(`content-${i}`).style.display = "none";
     }
   }
 }
 
 function handleSlider(n) {
   changeMenu(n);
-  document.getElementById("menu-slider").style.transform = `translateX(calc(${
-    n - 1
-  } * 100px))`;
-}
-
-function handleClickGallery(path) {
-  document.getElementById("gallery-large").style.display = "block";
-  document.getElementById("gallery-large-img").src = path;
-}
-
-function handleCloseGallery() {
-  document.getElementById("gallery-large").style.display = "none";
+  menuSlider.style.transform = `translateX(calc(${n - 1} * 100px))`;
 }
 
 // dark mode

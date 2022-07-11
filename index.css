@@ -43,8 +43,8 @@ h1 {
 }
 
 p {
-  padding: 4px 0;
   font-size: 0.96em;
+  padding: 4px 0;
 }
 
 /* scrollbar */
@@ -189,7 +189,7 @@ main {
   z-index: 1;
 }
 
-.picture-large #close-btn {
+.picture-large #close-profile-btn {
   height: 30px;
   width: 30px;
   position: relative;
@@ -283,11 +283,12 @@ main {
 }
 
 #feed {
-  padding: 12px 2px 0 2px;
+  padding: 8px 2px 0 2px;
 }
 
 #feed h3 {
-  padding: 4px 0;
+  font-size: 1.12em;
+  padding: 8px 0;
 }
 
 #feed-info {
@@ -428,7 +429,7 @@ main {
   z-index: 1;
 }
 
-.gallery-large #close-btn {
+.gallery-large #close-gallery-btn {
   height: 30px;
   width: 30px;
   position: relative;

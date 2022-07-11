@@ -21,11 +21,11 @@
       <img src="image/cover.png" alt="cover image" />
     </section>
     <section id="profile">
-      <div id="picture" onclick="handleClickProfile()">
+      <div id="picture">
         <img src="image/profile.jpg" alt="profile picture" />
       </div>
       <div class="picture-large" id="picture-large">
-        <img src="icon/close-1.png" alt="close" id="close-btn" onclick="handleCloseProfile()" />
+        <img src="icon/close-1.png" alt="close" id="close-profile-btn" />
         <img src="image/profile.jpg" alt="profile picture" id="pic-large" />
       </div>
       <div id="name">
@@ -54,12 +54,12 @@
               </div>
             </div>
             <div id="feed">
-              <h3>✅ 관심 직무</h3>
+              <h3>✔ 관심 직무</h3>
               <p>- 웹 프론트엔드 개발자</p>
               <p>- 솔루션 엔지니어</p>
               <p>- 외국계/해외 취업</p>
               <br>
-              <h3>✅ 관심 분야/기술</h3>
+              <h3>✔ 관심 분야/기술</h3>
               <p>- CSS, React(💖), TypeScript</p>
               <p>- 추천 알고리즘 (User-based CF)</p>
               <p>- 컴퓨터 비전 (Object Detection)</p>
@@ -74,12 +74,12 @@
               </div>
             </div>
             <div id="feed">
-              <h3>✅ AI트랙에서 기대되는 점</h3>
+              <h3>✔ AI트랙에서 기대되는 점</h3>
               <p>- 다양한 프로젝트&스터디 경험</p>
               <p>- 새로운 인적 네트워크</p>
               <p>- 커리어 빌드업 프로그램</p>
               <br>
-              <h3>✅ 동료 레이서에게 하고 싶은 말</h3>
+              <h3>✔ 동료 레이서에게 하고 싶은 말</h3>
               <p>화이팅해서 모두들 각자의 목표를 이뤄내면 좋겠어요 :D</p>
             </div>
           </article>
@@ -101,43 +101,43 @@
         <section id="content-3">
           <div id="gallery-wrap">
             <section class="gallery" id="gallery-line-1">
-              <article class="gallery-box" onclick="handleClickGallery(this.children[0].getAttribute('src'))">
+              <article class="gallery-box">
                 <img src="image/computer.jpg" alt="개발환경" />
                 <p><b>자세히 보기</b></p>
               </article>
-              <article class="gallery-box" onclick="handleClickGallery(this.children[0].getAttribute('src'))">
+              <article class="gallery-box">
                 <img src="image/tequila.jpg" alt="Tequila" />
                 <p><b>자세히 보기</b></p>
               </article>
-              <article class="gallery-box" onclick="handleClickGallery(this.children[0].getAttribute('src'))">
+              <article class="gallery-box">
                 <img src="image/tteokbokki.jpg" alt="작은공간 떡볶이" />
                 <p><b>자세히 보기</b></p>
               </article>
             </section>
             <section class="gallery" id="gallery-line-2">
-              <article class="gallery-box" onclick="handleClickGallery(this.children[0].getAttribute('src'))">
+              <article class="gallery-box">
                 <img src="image/berlin.jpg" alt="베를린 성당" />
                 <p><b>자세히 보기</b></p>
               </article>
-              <article class="gallery-box" onclick="handleClickGallery(this.children[0].getAttribute('src'))">
+              <article class="gallery-box">
                 <img src="image/codeclub.jpg" alt="코딩 교육봉사" />
                 <p><b>자세히 보기</b></p>
               </article>
-              <article class="gallery-box" onclick="handleClickGallery(this.children[0].getAttribute('src'))">
+              <article class="gallery-box">
                 <img src="image/parkjaekyung.jpg" alt="박재경 (고양이 이름임)" />
                 <p><b>자세히 보기</b></p>
               </article>
             </section>
           </div>
           <div class="gallery-large" id="gallery-large">
-            <img src="icon/close-2.png" alt="close" id="close-btn" onclick="handleCloseGallery()" />
+            <img src="icon/close-2.png" alt="close" id="close-gallery-btn" />
             <img src="#" alt="picture" id="gallery-large-img" />
             <div>사진 설명이다</div>
           </div>
         </section>
       </div>
       <footer>
-        <p>Copyright © 2022. Yumin Lee. All rights reserved.</p>
+        <p>Copyright © 2022 by Yumin Lee. All rights reserved.</p>
       </footer>
       <div class="dark-mode-switch">
         <label class="switch">
