@@ -16,6 +16,8 @@
   --primary-text: #050505;
   --secondary-text: #65676B;
   --hover-pink: #FBC5C5;
+  --menu-accent: #1676F3;
+  --menu-selected-background: #E7F3FF;
   --menu-color: #4C3F91;
   --menu-color-hover: #F0F2F5;
   --devider: #CED0D4;
@@ -43,7 +45,6 @@ h1 {
 }
 
 p {
-  font-size: 0.96em;
   padding: 4px 0;
 }
 
@@ -312,7 +313,8 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 #content-1 {
   width: 900px;
-  display: inherit;
+  /* display: inherit; */
+  display: none;
   flex-direction: inherit;
 }
 
@@ -339,6 +341,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 }
 
 #feed-writer p {
+  font-size: 0.96em;
   padding: 1px 0;
 }
 
@@ -349,7 +352,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 #content-2 {
   width: 900px;
-  display: none;
+  /* display: none; */
 }
 
 .info-box {
@@ -358,37 +361,73 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   background-color: white;
   border-radius: 10px;
   padding: 5px;
   box-shadow: 0 1px 2px 0 var(--border-shadow);
 }
 
-#info-selector {
+.info-selector {
   width: 25%;
   min-height: inherit;
   border-right: 1px solid var(--devider);
 }
 
-#info-selector ul {
+.info-selector h3 {
+  padding: 10px 0 8px 10px;
+  color: var(--primary-text);
+}
+
+.info-selector ul {
   list-style: none;
   margin-right: 4px;
 }
 
-#info-selector ul li {
-  padding: 6px 10px;
+.info-selector ul li {
+  padding: 10px 10px;
   margin: 2px 0;
   border-radius: 5px;
+  color: var(--secondary-text);
+  font-weight: 600;
   cursor: pointer;
 }
 
-#info-selector ul li:hover {
+.info-selector ul li:hover {
   background-color: var(--menu-color-hover);
 }
 
-#info-content {
+.info-selector ul li:first-child {
+  color: var(--menu-accent);
+  background-color: var(--menu-selected-background);
+}
+
+.info-content {
   width: 75%;
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.information {
+  display: inherit;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.information img {
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+}
+
+.info-content p:nth-child(1) {
+  font-size: 0.96em;
+}
+
+.info-content p:nth-child(2) {
+  font-size: 0.8em;
+  padding: 1px 0;
 }
 
 #content-3 {
