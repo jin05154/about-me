@@ -4,7 +4,6 @@
 <head>
   <title>Yumin Lee</title>
   <link rel="stylesheet" href="index.css" />
-  <script src="index.js"></script>
 </head>
 
 <body>
@@ -14,7 +13,6 @@
         <li><a href="https://github.com/jin05154" target="_blank">GitHub</a></li>
         <li><a href="https://snakehips.tistory.com/" target="_blank">Blog</a></li>
         <li><a href="https://www.linkedin.com/in/dorayuminlee/" target="_blank">Linkedin</a></li>
-        <li><a href="https://www.instagram.com/dorayuminlee/" target="_blank">IG</a></li>
       </ul>
     </nav>
   </header>
@@ -38,9 +36,9 @@
     </section>
     <nav id="menu-nav">
       <div id="menu-wrap">
-        <div id="menu-1" class="menu" onclick="handleSlider(1)"><b>게시물</b></div>
-        <div id="menu-2" class="menu" onclick="handleSlider(2)"><b>정보</b></div>
-        <div id="menu-3" class="menu" onclick="handleSlider(3)"><b>사진</b></div>
+        <div id="menu-1" class="menu" onclick="handleSlider(1)">게시물</div>
+        <div id="menu-2" class="menu" onclick="handleSlider(2)">정보</div>
+        <div id="menu-3" class="menu" onclick="handleSlider(3)">사진</div>
       </div>
     </nav>
     <div id="menu-slider"></div>
@@ -51,7 +49,7 @@
             <div id="feed-info">
               <img src="image/profile.jpg" alt="profile picture" />
               <div id="feed-writer">
-                <p><strong>이유민</strong></p>
+                <p><b>이유민</b></p>
                 <p>2022년 7월 10일</p>
               </div>
             </div>
@@ -62,7 +60,7 @@
               <p>- 외국계/해외 취업</p>
               <br>
               <h3>✅ 관심 분야/기술</h3>
-              <p>- CSS, React(💖), Express.js</p>
+              <p>- CSS, React(💖), TypeScript</p>
               <p>- 추천 알고리즘 (User-based CF)</p>
               <p>- 컴퓨터 비전 (Object Detection)</p>
             </div>
@@ -71,7 +69,7 @@
             <div id="feed-info">
               <img src="image/profile.jpg" alt="profile picture" />
               <div id="feed-writer">
-                <p><strong>이유민</strong></p>
+                <p><b>이유민</b></p>
                 <p>2022년 7월 10일</p>
               </div>
             </div>
@@ -89,6 +87,13 @@
         <section id="content-2">
           <article class="info-box">
             <section id="info-selector">
+              <ul>
+                <li>개요</li>
+                <li>경력 및 학력</li>
+                <li>Tech Skills</li>
+                <li>연락처 및 기본 정보</li>
+                <li>TMI</li>
+              </ul>
             </section>
             <section id="info-content"></section>
           </article>
@@ -127,14 +132,27 @@
           <div class="gallery-large" id="gallery-large">
             <img src="icon/close-2.png" alt="close" id="close-btn" onclick="handleCloseGallery()" />
             <img src="#" alt="picture" id="gallery-large-img" />
+            <div>사진 설명이다</div>
           </div>
         </section>
       </div>
       <footer>
         <p>Copyright © 2022. Yumin Lee. All rights reserved.</p>
       </footer>
+      <div class="dark-mode-switch">
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider">
+            <div id="icon">
+              <p>🌞</p>
+              <p>🌛</p>
+            </div>
+          </span>
+        </label>
+      </div>
     </section>
   </main>
+  <script src="index.js"></script>
 </body>
 
 </html>
