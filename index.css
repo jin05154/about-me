@@ -157,7 +157,6 @@ main {
   height: 40px;
   position: relative;
   background-color: white;
-  z-index: 99;
   margin: -45px 0 0 26px;
 }
 
@@ -213,6 +212,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.6) 0 0 0 9999px;
   animation: 0.4s pictureAnimation;
+  z-index: 1;
 }
 
 .picture-large #pic-large {
