@@ -5,6 +5,7 @@ const menuSlider = document.getElementById("menu-slider");
 const galleryItems = document.querySelectorAll(".gallery-box");
 const galleryImages = document.querySelectorAll(".gallery-box > img");
 const btnCloseGallery = document.getElementById("close-gallery-btn");
+const popupSign = document.getElementById("popup-sign");
 
 // dark mode toggle switch
 let checkbox = document.querySelector('input[type="checkbox"]');
@@ -49,6 +50,20 @@ function handleSlider(n) {
   changeMenu(n);
   menuSlider.style.transform = `translateX(calc(${n - 1} * 100px))`;
 }
+
+// dark mode
+document.addEventListener("DOMContentLoaded", function () {
+  checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+      popupSign.style.display = "inline";
+      setTimeout(function () {
+        popupSign.style.display = "none";
+        checkbox.checked = false;
+      }, 2500);
+      // 안내문 나타났다 사라지기까지 3초 기다린 후에 display: none으로 고정, 스위치 제자리
+    }
+  });
+});
 
 // dark mode
 // document.addEventListener("DOMContentLoaded", function () {

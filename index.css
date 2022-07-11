@@ -529,15 +529,38 @@ input:checked+.slider:before {
 }
 
 #icon {
-  font-size: 0.9em;
+  font-size: 0.8em;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding: 2px;
 }
 
 #icon p {
   padding: 2px;
+}
+
+#popup-sign {
+  position: fixed;
+  bottom: 50px;
+  right: 16px;
+  background-color: white;
+  padding: 8px 12px;
+  border: 2px dashed var(--menu-color);
+  border-radius: 28px;
+  font-weight: 700;
+  display: none;
+  animation: fadeOut 1s 1.5s 1;
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
 }
 
 /* footer */
