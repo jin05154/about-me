@@ -1,3 +1,4 @@
+const musicPlayer = document.querySelector("audio");
 const profilePicture = document.getElementById("picture");
 const btnClosePicture = document.getElementById("close-profile-btn");
 const menuSlider = document.getElementById("menu-slider");
@@ -9,8 +10,10 @@ const btnCloseGallery = document.getElementById("close-gallery-btn");
 let checkbox = document.querySelector('input[type="checkbox"]');
 let checkedMenu = 0;
 
-// TODO: addEventListener/정보/nav 아이콘/bgm/언어 변경/dark mode
+// TODO: 정보/nav 아이콘/언어 변경/dark mode
 
+musicPlayer.volume = 0.2;
+musicPlayer.controlsList = "nodownload noplaybackrate";
 profilePicture.addEventListener("click", () => {
   document.getElementById("picture-large").style.display = "block";
 });
