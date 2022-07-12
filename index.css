@@ -314,8 +314,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 #content-1 {
   width: 900px;
-  /* display: inherit; */
-  display: none;
+  display: inherit;
   flex-direction: inherit;
 }
 
@@ -353,7 +352,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 #content-2 {
   width: 900px;
-  /* display: none; */
+  display: none;
 }
 
 .info-wrap {
