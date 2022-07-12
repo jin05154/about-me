@@ -82,6 +82,7 @@ p {
   width: 100%;
   background-color: white;
   box-shadow: 0 -3px 9px 0 var(--border-shadow);
+  z-index: 1;
 }
 
 #top-nav .dark-mode {
@@ -115,7 +116,7 @@ p {
 }
 
 #top-nav ul li:hover a {
-  color: var(--menu-color);
+  color: var(--menu-accent);
 }
 
 /* main */
@@ -274,14 +275,14 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 }
 
 #menu-1 {
-  color: var(--menu-color);
+  color: var(--menu-accent);
 }
 
 #menu-slider {
   width: 100px;
   height: 3px;
   margin-top: -3px;
-  background: var(--menu-color);
+  background: var(--menu-accent);
   z-index: 99;
   transition: 0.3s;
 }
@@ -355,7 +356,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
   /* display: none; */
 }
 
-.info-box {
+.info-wrap {
   width: 100%;
   min-height: 300px;
   display: flex;
@@ -387,6 +388,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
   padding: 10px 10px;
   margin: 2px 0;
   border-radius: 5px;
+  background-color: white;
   color: var(--secondary-text);
   font-weight: 600;
   cursor: pointer;
@@ -408,26 +410,74 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
   flex-direction: column;
 }
 
-.information {
+.info-section {
+  display: inherit;
+  flex-direction: column;
+}
+
+.info-section h4 {
+  padding: 10px 0 0 5px;
+}
+
+#info-2, #info-3, #info-4, #info-5 {
+  display: none;
+}
+
+.information-box {
   display: inherit;
   flex-direction: row;
   align-items: center;
   padding-bottom: 10px;
 }
 
-.information img {
+.information-box img {
   width: 24px;
   height: 24px;
   padding: 6px;
+}
+
+#work-edu {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .info-content p:nth-child(1) {
   font-size: 0.96em;
 }
 
-.info-content p:nth-child(2) {
+.info-content p:nth-child(n+2) {
   font-size: 0.8em;
   padding: 1px 0;
+  color: var(--secondary-text);
+}
+
+.info-content p:nth-child(3) {
+  padding: 8px 0 1px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-bottom: 10px;
+}
+
+#contact img {
+  padding: 10px 6px 6px;
+}
+
+.info-content #info-p {
+  padding: 6px 0 2px;
+}
+
+.info-content a {
+  text-decoration: none;
+  color: var(--primary-text);
+}
+
+.info-content a:hover {
+  text-decoration-line: underline;
 }
 
 #content-3 {
@@ -606,6 +656,8 @@ input:checked+.slider:before {
 footer {
   text-align: center;
   color: gray;
+  font-size: 0.9em;
+  padding: 10px 0;
 }
 
 /* tablet */

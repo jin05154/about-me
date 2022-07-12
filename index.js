@@ -1,11 +1,13 @@
 const musicPlayer = document.querySelector("audio");
+const popupSign = document.getElementById("popup-sign");
 const profilePicture = document.getElementById("picture");
 const btnClosePicture = document.getElementById("close-profile-btn");
 const menuSlider = document.getElementById("menu-slider");
 const galleryItems = document.querySelectorAll(".gallery-box");
 const galleryImages = document.querySelectorAll(".gallery-box > img");
 const btnCloseGallery = document.getElementById("close-gallery-btn");
-const popupSign = document.getElementById("popup-sign");
+const infoSelector = document.querySelectorAll(".info-selector > ul > li");
+const infoContents = document.querySelectorAll(".info-section");
 
 // dark mode toggle switch
 let checkbox = document.querySelector('input[type="checkbox"]');
@@ -31,12 +33,33 @@ btnCloseGallery.addEventListener(
   "click",
   () => (document.getElementById("gallery-large").style.display = "none")
 );
+// TODO: 왜 classList add로 css 적용이 안 되지?
+infoSelector.forEach((item, index) => {
+  item.addEventListener("click", function () {
+    infoSelector.forEach((el, i) => {
+      infoContents[i].style.display = "none";
+      el.style.color = "var(--secondary-text)";
+      el.style.backgroundColor = "white";
+    });
+    infoContents[index].style.display = "flex";
+    item.style.color = "var(--menu-accent)";
+    item.style.backgroundColor = "var(--menu-selected-background)";
+  });
+  item.addEventListener("mouseover", () => {
+    if (item.style.color !== "var(--menu-accent)")
+      item.style.backgroundColor = "var(--menu-color-hover)";
+  });
+  item.addEventListener("mouseout", () => {
+    if (item.style.color !== "var(--menu-accent)")
+      item.style.backgroundColor = "white";
+  });
+});
 
 function changeMenu(n) {
   checkedMenu = n;
   for (let i = 1; i <= 3; i++) {
     if (i == n) {
-      document.getElementById(`menu-${i}`).style.color = "var(--menu-color)";
+      document.getElementById(`menu-${i}`).style.color = "var(--menu-accent)";
       document.getElementById(`content-${i}`).style.display = "contents";
     } else {
       document.getElementById(`menu-${i}`).style.color =
@@ -51,7 +74,7 @@ function handleSlider(n) {
   menuSlider.style.transform = `translateX(calc(${n - 1} * 100px))`;
 }
 
-// dark mode
+// dark mode - 준비중
 document.addEventListener("DOMContentLoaded", function () {
   checkbox.addEventListener("change", function () {
     if (checkbox.checked) {
