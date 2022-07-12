@@ -494,6 +494,27 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
   padding: 6px 0;
 }
 
+#languages {
+  display: flex;
+  flex-direction: row;
+}
+
+#languages section {
+  width: 50%;
+}
+
+.language-box {
+  display: flex;
+  flex-direction: row;
+  padding: 6px 8px;
+}
+
+.language-box img {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+
 #content-3 {
   width: 900px;
   display: none;
