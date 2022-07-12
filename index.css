@@ -416,7 +416,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 }
 
 .info-section h4 {
-  padding: 10px 0 0 5px;
+  padding: 10px 0 3px 5px;
 }
 
 #info-2, #info-3, #info-4, #info-5 {
@@ -478,6 +478,20 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .info-content a:hover {
   text-decoration-line: underline;
+}
+
+.tmi-box {
+  padding: 4px 0;
+}
+
+.tmi-box ul {
+  list-style: circle inside;
+  font-size: 0.93em;
+  padding: 4px 12px;
+}
+
+.tmi-box ul li {
+  padding: 6px 0;
 }
 
 #content-3 {
