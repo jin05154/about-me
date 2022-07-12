@@ -5,6 +5,7 @@ const btnClosePicture = document.getElementById("close-profile-btn");
 const menuSlider = document.getElementById("menu-slider");
 const galleryItems = document.querySelectorAll(".gallery-box");
 const galleryImages = document.querySelectorAll(".gallery-box > img");
+const gallerySummary = document.querySelectorAll(".gallery-box > span");
 const btnCloseGallery = document.getElementById("close-gallery-btn");
 const infoSelector = document.querySelectorAll(".info-selector > ul > li");
 const infoContents = document.querySelectorAll(".info-section");
@@ -27,6 +28,8 @@ galleryItems.forEach((item, index) =>
   item.addEventListener("click", function () {
     document.getElementById("gallery-large").style.display = "block";
     document.getElementById("gallery-large-img").src = galleryImages[index].src;
+    document.getElementById("gallery-large-summary").innerHTML =
+      gallerySummary[index].innerHTML;
   })
 );
 btnCloseGallery.addEventListener(
