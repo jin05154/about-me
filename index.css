@@ -161,31 +161,6 @@ main {
   margin: -45px 0 0 26px;
 }
 
-/* audio */
-#music-player {
-  margin: -4px 0 0 -20px;
-}
-
-audio::-webkit-media-controls-panel {
-  background-color: white;
-}
-
-audio::-webkit-media-controls-timeline-container,
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display,
-audio::-webkit-media-controls-timeline,
-audio::-webkit-media-controls-mute-button,
-audio::-webkit-media-controls-volume-slider-container,
-audio::-webkit-media-controls-volume-slider,
-audio::-webkit-media-controls-seek-back-button,
-audio::-webkit-media-controls-seek-forward-button,
-audio::-webkit-media-controls-fullscreen-button,
-audio::-webkit-media-controls-rewind-button,
-audio::-webkit-media-controls-return-to-realtime-button,
-audio::-webkit-media-controls-toggle-closed-captions-button {
-  display: none;
-}
-
 #picture {
   height: 208px;
   width: 208px;
@@ -205,7 +180,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
   width: 610px;
   position: fixed;
   display: none;
-  top: 20vh;
+  top: 10vh;
   left: 0;
   transform: translate(calc(50vw - 50%));
   border: 2px solid var(--border-color);
@@ -243,6 +218,31 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     opacity: 1;
     margin-top: 0;
   }
+}
+
+/* audio */
+#music-player {
+  margin: -4px 0 0 -20px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: white;
+}
+
+audio::-webkit-media-controls-timeline-container,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider-container,
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-seek-back-button,
+audio::-webkit-media-controls-seek-forward-button,
+audio::-webkit-media-controls-fullscreen-button,
+audio::-webkit-media-controls-rewind-button,
+audio::-webkit-media-controls-return-to-realtime-button,
+audio::-webkit-media-controls-toggle-closed-captions-button {
+  display: none;
 }
 
 #menu-nav {
@@ -564,11 +564,11 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 }
 
 .gallery-large {
-  height: 740px;
-  width: 630px;
+  height: 630px;
+  width: 530px;
   position: fixed;
   display: none;
-  top: 11vh;
+  top: 10vh;
   left: 0;
   transform: translate(calc(50vw - 50%));
   border: 2px solid var(--border-color);
@@ -579,8 +579,8 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 }
 
 .gallery-large #gallery-large-img {
-  height: 600px;
-  width: 600px;
+  height: 500px;
+  width: 500px;
   padding: 10px 15px 0;
   margin-top: -56px;
   z-index: 1;
@@ -595,7 +595,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
   height: 30px;
   width: 30px;
   position: relative;
-  margin: 28px 0 0 calc(620px - 44px);
+  margin: 28px 0 0 calc(620px - 146px);
   z-index: 9999;
   cursor: pointer;
 }
