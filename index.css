@@ -13,12 +13,11 @@
   --border-shadow: #D3D3D3;
   --nav-border-color: #CACACA;
   --content-background: #F0F2F5;
+  --highlight-color: #4C3F91;
   --primary-text: #050505;
   --secondary-text: #65676B;
-  --hover-pink: #FBC5C5;
   --menu-accent: #1676F3;
   --menu-selected-background: #E7F3FF;
-  --menu-color: #4C3F91;
   --menu-color-hover: #F0F2F5;
   --devider: #CED0D4;
   --switch-background: #D8D4D4;
@@ -676,7 +675,7 @@ input:checked+.slider:before {
   right: 16px;
   background-color: white;
   padding: 8px 12px;
-  border: 2px dashed var(--menu-color);
+  border: 2px dashed var(--highlight-color);
   border-radius: 28px;
   font-weight: 700;
   display: none;

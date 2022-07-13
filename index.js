@@ -14,7 +14,7 @@ const infoContents = document.querySelectorAll(".info-section");
 let checkbox = document.querySelector('input[type="checkbox"]');
 let checkedMenu = 0;
 
-// TODO: 정보/nav 아이콘/언어 변경/dark mode
+// TODO: 언어 변경/dark mode
 
 musicPlayer.volume = 0.2;
 musicPlayer.controlsList = "nodownload noplaybackrate";
